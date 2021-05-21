@@ -18,10 +18,10 @@ use App\Http\Controllers\PostsController;
 Route::get('/', [PagesController::class, 'index']);
 
 Route::resource('/blog', PostsController::class);
-Route::get('/search', 'PostsController@search');
-
 
 Auth::routes();
+
+Route::get('/search-record', [\App\Http\Controllers\PostsController::class, 'search']);
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

@@ -14,25 +14,25 @@
     </div>
 </div>
 
-@foreach ($posts as $post)
 
 <div class="card-group" style="padding:20px">
  <div class="card" style="margin:10px">
-     <img src="{{ asset('images/'. $post->image_path) }}" class="card-img-top" alt="...">
+     <img src="{{ URL('images/1512287.jpg')}}" class="card-img-top" alt="...">
      <div class="card-body">
-     <b> <h5 class="card-title"> {{ $post->title }}</h5></b>
+     <b> <h5 class="card-title">AVatar</h5></b>
      <p class="text-xl text-gray-700 pt-8 leading-8 font-light pb-9">
-            {{ $post->description }}
+     Avatar is a 2009 American epic science fiction film directed, written, produced, and co-edited by
+      James Cameron and starring Sam Worthington
         </p>
      </div>
      <div class="card-footer">
-      <small class="text-muted"><span class="text-gray-500">{{ $post->cast }}</span></small> ||
+      <small class="text-muted"><span class="text-gray-500">tom</span></small> ||
       <small class="text-muted">Release date: 16-Dec-2009</small> ||
-      <small class="text-muted"><span class="text-gray-500">{{ $post->city }}</span></small>
+     <small class="text-muted"><span class="text-gray-500">jamnagar</span></small>
     </div>
   </div>
 </div>
-@endforeach
+
 
     <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
