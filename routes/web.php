@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
-
+use App\Http\Controllers\BookingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,11 +17,15 @@ use App\Http\Controllers\PostsController;
 
 Route::get('/', [PagesController::class, 'index']);
 
+Route::get('/booking', [BookingController::class, 'index']);
+Route::get('/booking/index', [BookingController::class, 'index']);
+
+
 Route::resource('/blog', PostsController::class);
 
 Auth::routes();
 
-Route::get('/search-record', [\App\Http\Controllers\PostsController::class, 'search']);
+Route::get('/search', [\App\Http\Controllers\PostsController::class, 'search']);
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

@@ -10,6 +10,11 @@
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
+ <!-- js -->
+ <script src="{{ asset('js/app.jquery-2.2.3.min.js') }}"></script>
+ <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <!-- //js -->
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -33,6 +38,7 @@
                 <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
                     <a class="no-underline hover:underline" href="/">Home</a>
                     <a class="no-underline hover:underline" href="/blog">All Movies</a>
+                    <a class="no-underline hover:underline" href="/booking/index">Book Tickets</a>
              
                     
                     @guest
@@ -54,10 +60,10 @@
                     @endguest
                 </nav>
 
-                <form class="d-flex" action="{{ url('/search-record')}}" method="get">
+                <form class="d-flex" type="get" action="{{ url('/search')}}">
                     {{ csrf_field() }} 
-        <input class="form-control me-2" type="text" name="name" placeholder="Movie, Title, City" aria-label="Search">
-        <input type="submit" class="btn btn-outline-light" >Search</button>
+        <input class="form-control me-2" type="text" name="query" placeholder="Movie, Title, City" aria-label="Search">
+        <input type="submit" class="btn btn-outline-light" value="search" ></button>
       </form>
             </div>
         </header>

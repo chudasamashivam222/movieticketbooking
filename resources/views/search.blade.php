@@ -38,17 +38,17 @@
         <img src="{{ asset('images/'. $post->image_path) }}" alt="">
     </div>
     <div>
-        <h2 class="text-gray-200 font-bold text-5xl pb-4">
+        <h2 class="text-gray-700 font-bold text-5xl pb-4">
             {{ $post->title }}
         </h2>
         
-        <p class="text-gray-300">Movie Cast: <span class="text-gray-100"><b>{{ $post->cast }}</b></span></p>
-        <p class="text-gray-300">Movie City:  <span class="text-gray-100"><b>{{ $post->city }}</b></span></p>
+        <p><b>Movie Cast: </b><span class="text-gray-500">{{ $post->cast }}</span></p>
+        <p><b>Movie City: </b> <span class="text-gray-500">{{ $post->city }}</span></p>
 <br />
-        <span class="text-gray-300">
-            By <span class="font-bold italic text-gray-300">{{ $post->user->name }}</span>, Created on{{ date('jS M Y', strtotime($post->updated_at)) }}
+        <span class="text-gray-500">
+            By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on{{ date('jS M Y', strtotime($post->updated_at)) }}
           </span>
-        <p class="text-xl text-gray-300 pt-8 leading-8 font-light pb-9">
+        <p class="text-xl text-gray-700 pt-8 leading-8 font-light pb-9">
             {{ $post->description }}
         </p>
         <a href="/blog/{{ $post->slug }}" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
@@ -60,19 +60,19 @@
             <span class=" float-right">
                 <a  
                 href="/blog/{{ $post->slug }}/edit"
-                class=" text-red-500 pr-3 hover: underline text-gray-200 pb-1 border-b-2">
+                class=" text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
                 Edit
                 </a>
 
             </span>
-            
+
             <span class=" float-right">
                 <form action="/blog/{{ $post->slug }}"
                     method="POST">
                     @csrf
                     @method('delete')
                     
-                    <button class=" text-red-500 pr-3 hover: underline hover:text-gray-200" 
+                    <button class=" text-red-500 pr-3 hover: underline hover:text-gray-900" 
                     type="submit">
                     Delete
                     </button>
@@ -87,4 +87,3 @@
 </div>
 @endforeach
 @endsection
-

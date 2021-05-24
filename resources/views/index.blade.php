@@ -7,28 +7,58 @@
                   <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
                   Movie Ticket Booking!
                  </h1>
-                 <a href="/blog" class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
-                    Read More
+                 <a href="/booking/index" class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
+                    Book Now
                  </a>
         </div>
     </div>
 </div>
 
 
-<div class="card-group" style="padding:20px">
- <div class="card" style="margin:10px">
-     <img src="{{ URL('images/1512287.jpg')}}" class="card-img-top" alt="...">
-     <div class="card-body">
-     <b> <h5 class="card-title">AVatar</h5></b>
-     <p class="text-xl text-gray-700 pt-8 leading-8 font-light pb-9">
-     Avatar is a 2009 American epic science fiction film directed, written, produced, and co-edited by
-      James Cameron and starring Sam Worthington
-        </p>
-     </div>
-     <div class="card-footer">
-      <small class="text-muted"><span class="text-gray-500">tom</span></small> ||
-      <small class="text-muted">Release date: 16-Dec-2009</small> ||
+<div class="row row-cols-1 row-cols-md-3 g-4" style="margin: 20px">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ URL('images/1512324.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Avatar</h5>
+        <p class="card-text"> Avatar is a 2009 American epic science fiction film directed, written, produced, and co-edited by
+      James Cameron and starring Sam Worthington</p>
+      </div>
+      <div class="card-footer">
+      <small class="text-muted"><span class="text-gray-500">jon</span></small> ||
+      <small class="text-muted">Release date: 20-Dec-2021</small> ||
      <small class="text-muted"><span class="text-gray-500">jamnagar</span></small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ URL('images/1512287.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black Panther-2</h5>
+        <p class="card-text">Black Panther is a 2018 American superhero film based on the Marvel Comics character of the same name.
+         Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures</p>
+      </div>
+      <div class="card-footer">
+      <small class="text-muted"><span class="text-gray-500">Chadwick</span></small> ||
+      <small class="text-muted">Release date: 3-mar-2022</small> ||
+     <small class="text-muted"><span class="text-gray-500">Rajkot</span></small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ URL('images/1512297.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">The Thing</h5>
+        <p class="card-text">The Thing is a 2011 science fiction horror film directed by Matthijs van Heijningen Jr., written by Eric Heisserer, and starring 
+        Mary Elizabeth Winstead, Joel Edgerton, Ulrich Thomsen, Adewale Akinnuoye-Agbaje, and Eric Christian Olsen.</p>
+      </div>
+      <div class="card-footer">
+      <small class="text-muted"><span class="text-gray-500">Mary</span></small> ||
+      <small class="text-muted">Release date: 10-may-2020</small> ||
+     <small class="text-muted"><span class="text-gray-500">Rajkot</span></small>
+      </div>
     </div>
   </div>
 </div>

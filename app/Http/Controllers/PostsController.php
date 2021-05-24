@@ -142,13 +142,10 @@ class PostsController extends Controller
 
     }
 
-    public function search(Request $request)
+    public function search()
     {
-        if($request->isMethod('get'))
-        {
-            $name=$request->get('name');
-            $data=Post::where('slug', 'LIKE', '%' . $name . '%')->paginate(5);
+            $search_text = $_GET['query'];
+            $post = Post::where('title','LIKE', '%' .$search_text. '%')->get();
         }
-            return view('display', compact('data'));
-    }
+    
 }
