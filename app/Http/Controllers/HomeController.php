@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +22,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        $search = request()->query('search');
+
+        if ($search){
+            $post = Home::where('title','LIKE', "%{$search}%")->simplePaginate(3);
+        }else{
+            $post = Home::simplePaginate(3);
+        }
         return view('home');
     }
     

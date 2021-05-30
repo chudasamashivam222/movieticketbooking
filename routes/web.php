@@ -1,9 +1,17 @@
 <?php
 
+
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\HomeController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,7 +37,8 @@ Route::get('/search', [\App\Http\Controllers\PostsController::class, 'search']);
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+Route::get('/user', [\App\Http\Controllers\UserController::class, 'index'])->name('user');
+//Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/index', [IndexController::class, 'index']);

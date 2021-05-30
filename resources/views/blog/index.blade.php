@@ -7,7 +7,7 @@
             New Movies
         </h1>
 
-    </div>
+    </div>    
 </div>
      @if (session()->has('message'))
      <div class=" w-4/5 m-auto mt-10 pl-2">
@@ -51,7 +51,7 @@
         <p class="text-xl text-gray-300 pt-8 leading-8 font-light pb-9">
             {{ $post->description }}
         </p>
-        <a href="/blog/{{ $post->slug }}" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+        <a href="/booking/index" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
             Book Now
         </a>
 

@@ -60,11 +60,7 @@
                     @endguest
                 </nav>
 
-                <form class="d-flex" type="get" action="{{ url('/search')}}">
-                    {{ csrf_field() }} 
-        <input class="form-control me-2" type="text" name="query" placeholder="Movie, Title, City" aria-label="Search">
-        <input type="submit" class="btn btn-outline-light" value="search" ></button>
-      </form>
+                
             </div>
         </header>
 <div>

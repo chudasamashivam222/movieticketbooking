@@ -1,6 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- 
+<main class="sm:container sm:mx-auto sm:mt-10">
+    <div class="w-full sm:px-6">
+
+        @if (session('status'))
+            <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
+
+        <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
+
+            <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
+                User
+            </header>
+
+            <div class="w-full p-6">
+                <p class="text-gray-700">
+                    You are logged in!
+                </p>
+            </div>
+        </section>
+    </div>
+</main>
+-->
+
 <div class="background-image grid grid-cols-1 m-auto">
     <div class="flex text-gray-100 pt-10">
         <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
@@ -10,17 +36,10 @@
                  <a href="/booking/index" class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
                     Book Now
                  </a>
-                 <br />
-                 
-    <form class="input-group" method="GET" action="{{ route('home') }}">
-        <input class="form-control" type="text" name="search"  placeholder="Movie, Title, City">
-      </form>
-                     
         </div>
-        
     </div>
-    
 </div>
+
 
 <div class="row row-cols-1 row-cols-md-3 g-4" style="margin: 20px">
   <div class="col">
@@ -28,17 +47,16 @@
       <img src="{{ URL('images/1512324.jpg')}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Avatar</h5>
-        <p class="card-text">The Thing is a 2011 science fiction horror film directed by Matthijs van Heijningen Jr., written by Eric Heisserer, and starring 
-        Mary Elizabeth Winstead, Joel Edgerton, Ulrich Thomsen,</p>
+        <p class="card-text"> Avatar is a 2009 American epic science fiction film directed, written, produced, and co-edited by
+      James Cameron and starring Sam Worthington</p>
       </div>
       <div class="card-footer">
-      <small class="text-muted"><span class="text-gray-500">cast: tom</span></small> ||
+      <small class="text-muted"><span class="text-gray-500">jon</span></small> ||
       <small class="text-muted">Release date: 20-Dec-2021</small> ||
-     <small class="text-muted"><span class="text-gray-500">city: jamnagar</span></small>
+     <small class="text-muted"><span class="text-gray-500">jamnagar</span></small>
       </div>
     </div>
   </div>
-
   <div class="col">
     <div class="card h-100">
       <img src="{{ URL('images/1512287.jpg')}}" class="card-img-top" alt="...">
@@ -91,5 +109,4 @@
             </a>
          </div>
     </div>
-
 @endsection

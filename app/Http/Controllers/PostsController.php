@@ -19,7 +19,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-    
+      
         return view('blog.index')
                 ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
     }
@@ -142,10 +142,6 @@ class PostsController extends Controller
 
     }
 
-    public function search()
-    {
-            $search_text = $_GET['query'];
-            $post = Post::where('title','LIKE', '%' .$search_text. '%')->get();
-        }
+   
     
 }
