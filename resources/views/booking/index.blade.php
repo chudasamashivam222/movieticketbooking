@@ -23,6 +23,18 @@
                         </label>
                         <input type="number" id="Numseats" required min="1">
                     </div>
+                    <div class="agileits-right">
+                        <label> Select City
+                            <span>*</span>
+                            <input type="text" id="Username" required>
+                        </label>
+                    </div>
+                    <div class="agileits-right">
+                        <label> Select Theater
+                            <span>*</span>
+                        <input type="text" id="Username" required>
+                        </label>
+                    </div>
                 </div>
                 <button onclick="takeData()">Start Selecting</button>
             </div>
@@ -474,9 +486,13 @@
                 </div>
                 <button onclick="updateTextArea()">Confirm Selection</button>
             </div>
+            <a href="/booking/index" class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+                Book Tickets
+            </a>
+
             <!-- //seat layout -->
             <!-- details after booking displayed here -->
-            <div class="displayerBoxes txt-center" style="overflow-x:auto;">
+         <!--   <div class="displayerBoxes txt-center" style="overflow-x:auto;">
                 <table class="Displaytable w3ls-table" width="100%">
                     <tr>
                         <th>Name</th>
@@ -495,15 +511,12 @@
                         </td>
                     </tr>
                 </table>
-            </div>
+              
+            </div> -->
             <!-- //details after booking displayed here -->
         </div>
     </div>
-    <div class="copy-wthree">
-        <p>© 2018 Movie Seat Selection . All Rights Reserved | Design by
-            <a href="http://w3layouts.com/" target="_blank">W3layouts</a>
-        </p>
-    </div>
+
     <!-- js -->
     <script src="js/jquery-2.2.3.min.js"></script>
     <!-- //js -->
