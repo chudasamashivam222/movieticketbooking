@@ -10,27 +10,35 @@
             <!-- input fields -->
             <div class="inputForm">
                 <h2>fill the required details below and select your seats</h2>
+        
+        
                 <div class="mr_agilemain">
                     <div class="agileits-left">
-                        <label> Name
+                        <label>   Name 
                             <span>*</span>
                         </label>
                         <input type="text" id="Username" required>
                     </div>
                     <div class="agileits-right">
-                        <label> Number of Seats
+                        <label> Seat Number
                             <span>*</span>
                         </label>
                         <input type="number" id="Numseats" required min="1">
                     </div>
                     <div class="agileits-right">
-                        <label> Select City
+                        <label> show
+                            <span>*</span>
+                        </label>
+                        <input type="number" id="moviename" required min="1">
+                    </div>
+                    <div class="agileits-right">
+                        <label> City 
                             <span>*</span>
                             <input type="text" id="Username" required>
                         </label>
                     </div>
                     <div class="agileits-right">
-                        <label> Select Theater
+                        <label> Theater
                             <span>*</span>
                         <input type="text" id="Username" required>
                         </label>
@@ -38,6 +46,7 @@
                 </div>
                 <button onclick="takeData()">Start Selecting</button>
             </div>
+
             <!-- //input fields -->
             <!-- seat availabilty list -->
             <ul class="seat_w3ls">
@@ -486,7 +495,7 @@
                 </div>
                 <button onclick="updateTextArea()">Confirm Selection</button>
             </div>
-            <a href="/booking/index" class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+            <a href="/booking/show_booking" class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
                 Book Tickets
             </a>
 
